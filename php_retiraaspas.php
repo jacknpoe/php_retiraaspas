@@ -23,7 +23,7 @@
 		<h1>Retira aspas simples contra code injection (MariaDB e mySQL)<br></h1>
 
 		<form action="php_retiraaspas.php" method="POST" style="border: 0px">
-			<p>Valor: <input type="text" name="texto" style="width: 200px" value="<?php echo $texto; ?>"></p>
+			<p>Valor: <input type="text" name="texto" style="width: 500px" value="<?php echo $texto; ?>" autofocus></p>
 			<p><input type="submit" name="retirar" value="Retirar"></p>
 		</form>
 
