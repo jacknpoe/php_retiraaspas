@@ -23,11 +23,11 @@
 		<h1>Retira aspas simples contra code injection (MariaDB e mySQL)<br></h1>
 
 		<form action="php_retiraaspas.php" method="POST" style="border: 0px">
-			<p>Valor: <input type="text" name="texto" style="width: 500px" value="<?php echo $texto; ?>" autofocus></p>
+			<p>Valor: <input type="text" name="texto" style="width: 500px" value="<?php echo htmlspecialchars( $texto, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?>" autofocus></p>
 			<p><input type="submit" name="retirar" value="Retirar"></p>
 		</form>
 
-		<br><p>Resultado: <?php echo $resultado; ?></p><br><br>
+		<br><p>Resultado: <?php echo htmlspecialchars( $resultado, ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401, "ISO-8859-1"); ?></p><br><br>
 		<p><a href="https://github.com/jacknpoe/php_retiraaspas">Repositório no GitHub</a></p><br><br>
 		<form action="index.html" method="POST" style="border: 0px">
 			<p><input type="submit" name="voltar" value="Voltar"></p>
